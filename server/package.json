@@ -1,5 +1,5 @@
 {
-  "name": "cyphernode-mempool-server",
+  "name": "cypherapp-mempool-server",
   "version": "0.0.1",
   "description": "Get Bitcoin node's mempool information using cyphernode. Server side",
   "main": "server.js",

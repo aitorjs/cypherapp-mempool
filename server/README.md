@@ -1,5 +1,5 @@
 
-# cyphernode-mempool-server
+# cypherapp-mempool-server
 
 ## Install
 
