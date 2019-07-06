@@ -3,13 +3,14 @@
 const { CyphernodeClient } = require('./lib/cyphernode-client')
 const cypherClient = new CyphernodeClient()
 
-cypherClient.getNewAddress(res => {
-  console.log('address', res.address)
-  cypherClient.getBalance(res => {
-    console.log('balance', res.balance)
-  })
-})
+async function main() {
+  const { address } = await cypherClient.getNewAddress()
+  console.log('address', address)
+  const { balance } = await cypherClient.getBalance()
+  console.log('balance', balance)
 
-cypherClient.getMempoolinfo(res => {
-  console.log('mempool', res, res.size)
-})
+  const mempoolinfo = await cypherClient.getMempoolinfo()
+  console.log('mempoolinfo', mempoolinfo)
+}
+
+main()
