@@ -1,0 +1,15 @@
+{
+  "name": "cyphernode-mempool",
+  "version": "0.0.1",
+  "description": "Get Bitcoin node's mempool information using cyphernode.",
+  "scripts": {
+    "server": "cd server;npm run start",
+    "server-deps": "cd server; npm i",
+    "client-dev": "",
+    "client-build": "",
+    "client-deps": ""
+  },
+  "keywords": ["cyphernode", "cypherapp", "bitcoin"],
+  "author": "Aitor Ibañez <aitiba@gmail.com>",
+  "license": "GNU/GPL v3"
+}
