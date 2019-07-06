@@ -1,4 +1,6 @@
-const CyphernodeClient = require('./lib/cyphernode-client')
+'use strict'
+
+const { CyphernodeClient } = require('./lib/cyphernode-client')
 const cypherClient = new CyphernodeClient()
 
 cypherClient.getNewAddress(res => {

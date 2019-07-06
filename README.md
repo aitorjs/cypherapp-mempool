@@ -8,4 +8,4 @@
 ## Run
 
 1. Run server: ```npm run server```
-2. RUn webclient / webapp: xxxxxx
+2. Run webclient / webapp: xxxxxx
