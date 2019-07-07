@@ -1,9 +1,7 @@
 'use strict'
+const { Http } = require('./lib/http')
 
-const { CyphernodeClient } = require('./lib/cyphernode-client')
-const cypherClient = new CyphernodeClient()
-
-async function main() {
+/* async function main() {
   const { address } = await cypherClient.getNewAddress()
   console.log('address', address)
   const { balance } = await cypherClient.getBalance()
@@ -13,4 +11,6 @@ async function main() {
   console.log('mempoolinfo', mempoolinfo)
 }
 
-main()
+main() */
+
+new Http()

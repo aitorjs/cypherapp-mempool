@@ -1,7 +1,7 @@
 'use strict'
 
 const CryptoJS = require("crypto-js")
-const axios  = require('axios')
+const axios = require('axios')
 const fs = require('fs')
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
@@ -118,7 +118,7 @@ class CyphernodeClient {
   
   getMempoolinfo() {
     // http://192.168.122.152:8080/getmempoolinfo
-    return this.get('/getmempoolinfo/')
+    return this.get('/getmempoolinfo')
   }
   
   spend(btcaddr, amont) {
