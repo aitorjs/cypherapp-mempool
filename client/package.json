@@ -1,0 +1,32 @@
+{
+  "name": "cypherapp-mempool-client",
+  "version": "0.0.1",
+  "description": "Get Bitcoin node's mempool information using cyphernode. Client side",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "keywords": [
+    "cyphernode",
+    "cypherapp",
+    "bitcoin"
+  ],
+  "author": "Aitor Ibañez <aitiba@gmail.com>",
+  "license": "GNU/GPL v3",
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.1.0",
+    "vue-router": "^3.0.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.9.0",
+    "@vue/cli-plugin-typescript": "^3.9.0",
+    "@vue/cli-service": "^3.9.0",
+    "typescript": "^3.4.3",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

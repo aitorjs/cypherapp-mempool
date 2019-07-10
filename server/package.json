@@ -7,11 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "keywords": [
-    "cyphernode",
-    "cypherapp",
-    "bitcoin"
-  ],
+  "keywords": ["cyphernode", "cypherapp", "bitcoin"],
   "author": "Aitor Ibañez <aitiba@gmail.com>",
   "license": "GNU/GPL v3",
   "dependencies": {

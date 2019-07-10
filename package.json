@@ -5,9 +5,9 @@
   "scripts": {
     "server": "cd server;npm run start",
     "server-deps": "cd server; npm i",
-    "client-dev": "",
-    "client-build": "",
-    "client-deps": ""
+    "client-dev": "cd client; npm run serve",
+    "client-build": "cd client; npm run build",
+    "client-deps": "cd client; npm i"
   },
   "keywords": ["cyphernode", "cypherapp", "bitcoin"],
   "author": "Aitor Ibañez <aitiba@gmail.com>",
