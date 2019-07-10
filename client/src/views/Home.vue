@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div>
+    {{mempoolinfo}}
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import { Component, Vue } from 'vue-property-decorator'
+import Axios, { AxiosResponse } from 'axios'
 
 @Component({
-  components: {
-    HelloWorld,
-  },
+  components: { },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  private mempoolinfo: String = ''
+  
+  constructor() { 
+    super()
+    // this.mempoolinfo = ''
+  }
+
+  async created() {
+    const mempoolinfo = await Axios.get(`http://localhost:3000/getMempoolinfo`)
+    this.mempoolinfo = mempoolinfo.data
+    console.log('init', this.mempoolinfo)
+  }
+}
 </script>
