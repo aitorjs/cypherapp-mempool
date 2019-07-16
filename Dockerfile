@@ -1,6 +1,9 @@
-FROM node:12-alpine as builder
+FROM node:12-alpine
 
 ENV HOME /cypherapp_mempool
+
+# Enable OpenRC
+# ENV INITSYSTEM on 
 
 RUN apk add --update --no-cache \
     su-exec
@@ -15,9 +18,12 @@ COPY server/.env ./server
 COPY server/LICENSE ./server
 COPY server/package.json ./server
 COPY server/server.js ./server
+COPY server/cypherapp-mempool.service ./server
 
 COPY client/dist/* ./client/
 
 RUN npm run server-deps
+
+CMD ["npm", "run", "server"]
 
 # ENTRYPOINT ["su-exec"]
