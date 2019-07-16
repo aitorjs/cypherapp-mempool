@@ -15,4 +15,7 @@
 ## Using docker
 
 1. Build image: ```docker build -t cypherapp-mempool:v0.0.1 .```
-2. Exec container: ```docker run --rm -it -d -p 3000:3000 --network cyphernodenet cypherapp-mempool:v0.0.1 `id -u cyphernode`:`id -g cyphernode````
+2. Exec container: ```docker run --rm -it -d -p 3000:3000 --network cyphernodenet cypherapp-mempool:v0.0.1```
+
+
+docker run --rm -it --network cyphernodenet alpine ash
