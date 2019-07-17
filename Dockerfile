@@ -12,13 +12,15 @@ WORKDIR ${HOME}
 
 COPY LICENSE ./
 COPY package.json ./
+COPY package-lock.json ./
 
 COPY server/lib/* ./server/lib/
 COPY server/.env ./server
 COPY server/LICENSE ./server
 COPY server/package.json ./server
+COPY server/package-lock.json ./server
 COPY server/server.js ./server
-COPY server/cypherapp-mempool.service ./server
+# COPY server/cypherapp-mempool.service ./server
 
 COPY client/dist/* ./client/
 
