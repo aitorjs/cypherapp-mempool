@@ -12,7 +12,6 @@ WORKDIR ${HOME}
 
 COPY LICENSE ./
 COPY package.json ./
-COPY package-lock.json ./
 
 COPY server/lib/* ./server/lib/
 COPY server/.env ./server
@@ -22,7 +21,7 @@ COPY server/package-lock.json ./server
 COPY server/server.js ./server
 # COPY server/cypherapp-mempool.service ./server
 
-COPY client/dist/* ./client/
+COPY client/dist ./client/dist/
 
 RUN npm run server-deps
 
