@@ -7,7 +7,9 @@
     "server-deps": "cd server; npm i",
     "client-dev": "cd client; npm run serve",
     "client-build": "cd client; npm run build",
-    "client-deps": "cd client; npm i"
+    "client-deps": "cd client; npm i",
+    "docker-build-image": "docker build -t cypherapp-mempool:v0.0.1 .",
+    "docker-run": "docker run --rm -it -d -p 3000:3000 --network cyphernodenet cypherapp-mempool:v0.0.1"
   },
   "keywords": ["cyphernode", "cypherapp", "bitcoin"],
   "author": "Aitor Ibañez <aitiba@gmail.com>",
