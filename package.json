@@ -1,6 +1,6 @@
 {
   "name": "cypherapp-mempool",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Get Bitcoin node's mempool information using cyphernode.",
   "scripts": {
     "server": "cd server;npm run start",
@@ -8,8 +8,8 @@
     "client-dev": "cd client; npm run serve",
     "client-build": "cd client; npm run build",
     "client-deps": "cd client; npm i",
-    "docker-build-image": "docker build -t cypherapp-mempool:v0.0.1 .",
-    "docker-run": "docker run --rm -it -d -p 3000:3000 --network cyphernodenet cypherapp-mempool:v0.0.1",
+    "docker-build-image": "docker build -t cypherapp-mempool:v0.1.0 .",
+    "docker-run": "docker run --rm -it -d -p 3000:3000 --network cyphernodenet cypherapp-mempool:v0.1.0",
     "docker-compose-up": "docker-compose up -d"
   },
   "keywords": ["cyphernode", "cypherapp", "bitcoin"],

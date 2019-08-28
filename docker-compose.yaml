@@ -2,7 +2,7 @@ version: "3"
 
 services:
   cypherapp-mempool:
-    image: cypherapp-mempool:v0.0.1 
+    image: cypherapp-mempool:v0.1.0 
     volumes:
       - "$GATEKEEPER_DATAPATH/certs/cert.pem:/data/cert.pem"
       - "$GATEKEEPER_DATAPATH/keys.properties:/data/keys.properties"
