@@ -15,11 +15,13 @@
 ## Using docker
 
 0. Have cyphernode running with the chain up-to-date
-1. Build image: ```docker build -t cypherapp-mempool:v0.0.1 .``` or ```npm run docker-build-image```
-2. Exec container: ```docker run --rm -it -d -p 3000:3000 --network cyphernodenet cypherapp-mempool:v0.0.1``` or ```npm run docker-run```
+1. Build image: ```npm run docker-build-image```
+2. Exec container: ```npm run docker-run```
 3. Open webapp on ```http://localhost:3000```
-
 
 ## Using docker-composer
 
-1. ```npm run docker-compose-up``` or ```npm run docker-compose-up```
+0. Have cyphernode running with the chain up-to-date
+1. Build image: ```npm run docker-build-image``
+2. Up docker-compose configuration: ```npm run docker-compose-up```
+3. Open webapp on ```https://localhost/mempool```
