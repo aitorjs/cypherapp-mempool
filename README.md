@@ -22,4 +22,4 @@
 
 ## Using docker-composer
 
-1. ```npm run docker-compose-up```
+1. ```npm run docker-compose-up``` or ```npm run docker-compose-up```
