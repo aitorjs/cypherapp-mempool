@@ -15,13 +15,37 @@
 ## Using docker
 
 0. Have cyphernode running with the chain up-to-date
-1. Build image: ```npm run docker-build-image```
-2. Exec container: ```npm run docker-run```
-3. Open webapp on ```http://localhost:3000```
+1. Create ```.env``` file in the root of the project as
+```json
+{
+  "cypherApi": "CYPHERAPI-KEY" (*),
+  "h64": "H64-KEY",
+  "apiId": "APIID-KEY",
+  "apiKey": "APIKEY-KEY"
+}
+```
+2. Build image: ```npm run docker-build-image```
+3. Exec container: ```npm run docker-run```
+4. Open webapp on ```http://localhost:3000```
 
 ## Using docker-composer
 
 0. Have cyphernode running with the chain up-to-date
-1. Build image: ```npm run docker-build-image``
-2. Up docker-compose configuration: ```npm run docker-compose-up```
-3. Open webapp on ```https://localhost/mempool```
+1. Create ```.env``` file in the root of the project as:
+```json
+{
+  "cypherApi": "CYPHERAPI-KEY" (*),
+  "h64": "H64-KEY",
+  "apiId": "APIID-KEY",
+  "apiKey": "APIKEY-KEY"
+}
+```
+2. Build image: ```npm run docker-build-image``
+3. Up docker-compose configuration: ```npm run docker-compose-up```
+4. Open webapp on ```https://localhost/mempool```
+
+
+## Notes
+
+- (*) In .env.cypherApi file, use ```127.0.0.1``` outside docker
+and ```gatekeeper``` inside docker.
