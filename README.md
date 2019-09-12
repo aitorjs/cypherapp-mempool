@@ -41,7 +41,7 @@
   "apiKey": "APIKEY-KEY"
 }
 ```
-2. Build image: ```npm run docker-build-image``
+2. Build image: ```npm run docker-build-image```
 3. Up docker-compose configuration: ```npm run docker-compose-up```
 4. Open webapp on ```https://localhost/mempool```
 
