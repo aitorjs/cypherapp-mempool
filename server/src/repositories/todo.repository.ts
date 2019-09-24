@@ -5,7 +5,7 @@ import {inject} from '@loopback/core';
 
 export class TodoRepository extends DefaultCrudRepository<
   Todo,
-  typeof Todo.prototype.id,
+  // typeof Todo.prototype.id,
   TodoRelations
 > {
   constructor(
