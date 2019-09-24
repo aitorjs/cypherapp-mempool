@@ -1,0 +1,10 @@
+{
+  "name": "mysqlDs",
+  "connector": "mysql",
+  "url": "mysql://root:farsa@localhost/loopback-todo",
+  "host": "",
+  "port": 0,
+  "user": "",
+  "password": "",
+  "database": ""
+}

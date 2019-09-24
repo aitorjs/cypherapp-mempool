@@ -21,7 +21,7 @@ export default class Home extends Vue {
 
   async created() {
     // dockerfile http://localhost:3000/getMempoolinfo
-    const mempoolinfo = await Axios.get(`https://localhost/mempool/getMempoolinfo`)
+    const mempoolinfo = await Axios.get(`http://localhost:3000/getMempoolinfo`)
     this.mempoolinfo = mempoolinfo.data
     console.log('init', this.mempoolinfo)
   }
