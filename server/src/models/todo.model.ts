@@ -11,21 +11,40 @@ export class Todo extends Entity {
   id: number;
 
   @property({
-    type: 'string',
+    type: 'number',
     required: true,
   })
-  title: string;
+  size: number;
 
   @property({
-    type: 'string',
+    type: 'number',
+    required: true,
   })
-  desc?: string;
+  bytes: number;
 
   @property({
-    type: 'boolean',
-    default: false
+    type: 'number',
+    required: true,
   })
-  isComplete?: boolean;
+  usage: number;
+
+  @property({
+    type: 'number',
+    required: true,
+  })
+  maxmempool: number;
+
+  @property({
+    type: 'number',
+    required: true,
+  })
+  mempoolminfee: number;
+
+  @property({
+    type: 'number',
+    required: true,
+  })
+  minrelaytxfee: number;
 
   // Define well-known properties here
 
