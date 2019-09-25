@@ -1,9 +1,9 @@
 import {Client} from '@loopback/testlab';
-import {TodoListApplication} from '../..';
+import {CypherappMempoolServerApplication} from '../..';
 import {setupApplication} from './test-helper';
 
 describe('HomePage', () => {
-  let app: TodoListApplication;
+  let app: CypherappMempoolServerApplication;
   let client: Client;
 
   before('setupApplication', async () => {

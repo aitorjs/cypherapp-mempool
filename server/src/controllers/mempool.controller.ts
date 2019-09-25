@@ -1,11 +1,23 @@
-import {
-  get,
-  getModelSchemaRef,
-} from '@loopback/rest';
-import { Todo } from '../models';
-import { CyphernodeClient } from '../client'
+// Uncomment these imports to begin using these cool features!
 
-export class TodoController {
+// import {inject} from '@loopback/context';
+
+import {
+  post,
+  param,
+  get,
+  getFilterSchemaFor,
+  getModelSchemaRef,
+  getWhereSchemaFor,
+  patch,
+  put,
+  del,
+  requestBody,
+} from '@loopback/rest';
+
+import { CyphernodeClient } from '../client'
+import { Mempool } from '../models'
+export class MempoolController {
   client: any;
 
   constructor() {
@@ -20,7 +32,7 @@ export class TodoController {
           'application/json': {
             schema: {
               type: 'array',
-              items: getModelSchemaRef(Todo)
+              items: getModelSchemaRef(Mempool)
               // $ref: '#/components/schemas/MempoolInfo'
             }
           },

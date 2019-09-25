@@ -10,7 +10,7 @@ import {ServiceMixin} from '@loopback/service-proxy';
 import * as path from 'path';
 import {MySequence} from './sequence';
 
-export class TodoListApplication extends BootMixin(
+export class CypherappMempoolServerApplication extends BootMixin(
   ServiceMixin(RepositoryMixin(RestApplication)),
 ) {
   constructor(options: ApplicationConfig = {}) {
@@ -21,9 +21,6 @@ export class TodoListApplication extends BootMixin(
 
     // Set up default home page
     this.static('/', path.join(__dirname, '../public'));
-
-    // Set up webapp page
-    this.static('/mempool', path.join(__dirname, '../../public/app'));
 
     // Customize @loopback/rest-explorer configuration here
     this.bind(RestExplorerBindings.CONFIG).to({

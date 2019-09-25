@@ -1,20 +1,21 @@
 import {Entity, model, property} from '@loopback/repository';
 
 @model({settings: {strict: false}})
-export class Todo extends Entity {
+export class Mempool extends Entity {
   @property({
     type: 'number',
     id: true,
     required: true,
-    generated: false,
+    generated: true,
   })
   id: number;
-
+  
   @property({
     type: 'number',
     required: true,
   })
   size: number;
+
 
   @property({
     type: 'number',
@@ -38,13 +39,13 @@ export class Todo extends Entity {
     type: 'number',
     required: true,
   })
-  mempoolminfee: number;
+  mempoolminfree: number;
 
   @property({
     type: 'number',
     required: true,
   })
-  minrelaytxfee: number;
+  minrelaytxfree: number;
 
   // Define well-known properties here
 
@@ -52,13 +53,13 @@ export class Todo extends Entity {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [prop: string]: any;
 
-  constructor(data?: Partial<Todo>) {
+  constructor(data?: Partial<Mempool>) {
     super(data);
   }
 }
 
-export interface TodoRelations {
+export interface MempoolRelations {
   // describe navigational properties here
 }
 
-export type TodoWithRelations = Todo & TodoRelations;
+export type MempoolWithRelations = Mempool & MempoolRelations;

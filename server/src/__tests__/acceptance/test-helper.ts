@@ -1,4 +1,4 @@
-import {TodoListApplication} from '../..';
+import {CypherappMempoolServerApplication} from '../..';
 import {
   createRestAppClient,
   givenHttpServerConfig,
@@ -14,7 +14,7 @@ export async function setupApplication(): Promise<AppWithClient> {
     // port: +process.env.PORT,
   });
 
-  const app = new TodoListApplication({
+  const app = new CypherappMempoolServerApplication({
     rest: restConfig,
   });
 
@@ -27,6 +27,6 @@ export async function setupApplication(): Promise<AppWithClient> {
 }
 
 export interface AppWithClient {
-  app: TodoListApplication;
+  app: CypherappMempoolServerApplication;
   client: Client;
 }
