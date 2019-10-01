@@ -1,15 +1,7 @@
 import {Entity, model, property} from '@loopback/repository';
 
 @model({settings: {strict: false}})
-export class Mempool extends Entity {
-  @property({
-    type: 'number',
-    id: true,
-    required: true,
-    generated: true,
-  })
-  id: number;
-  
+export class Mempool extends Entity {  
   @property({
     type: 'number',
     required: true,
