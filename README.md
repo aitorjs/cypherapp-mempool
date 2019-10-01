@@ -19,7 +19,7 @@
 1. Create ```.env``` file in the root of the project as
 ```json
 {
-  "cypherApi": "CYPHERAPI-KEY" (*),
+  "cypherApi": "CYPHERAPI-KEY" (*), // https://gatekeeper:2009/v0
   "h64": "H64-KEY",
   "apiId": "APIID-KEY",
   "apiKey": "APIKEY-KEY"
@@ -35,7 +35,7 @@
 1. Create ```.env``` file in the root of the project as:
 ```json
 {
-  "cypherApi": "CYPHERAPI-KEY" (*),
+  "cypherApi": "CYPHERAPI-KEY" (*), // https://gatekeeper:2009/v0
   "h64": "H64-KEY",
   "apiId": "APIID-KEY",
   "apiKey": "APIKEY-KEY"
