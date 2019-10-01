@@ -22,6 +22,9 @@ export class CypherappMempoolServerApplication extends BootMixin(
     // Set up default home page
     this.static('/', path.join(__dirname, '../public'));
 
+    // Set up webapp page
+    this.static('/mempool', path.join(__dirname, '../../client/dist'));
+
     // Customize @loopback/rest-explorer configuration here
     this.bind(RestExplorerBindings.CONFIG).to({
       path: '/explorer',
