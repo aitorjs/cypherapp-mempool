@@ -1,27 +1,26 @@
-'use strict'
-
 const CryptoJS = require('crypto-js')
 const axios = require('axios')
 const fs = require('fs')
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 
-export class CyphernodeClient {
-  baseURL: string;
-  h64: string;
-  api_id: string;
-  api_key: string;
-
-  constructor(is_prod?: boolean) {
+export class CyphernodeRepository {
+  baseURL: string
+  h64: string
+  api_id: string
+  api_key: string
+  
+  constructor(is_prod: boolean = false) {
     const ENV = JSON.parse(fs.readFileSync('.env', 'utf8'))
-
+  
     this.baseURL = is_prod ? 'https://cyphernode:443' : ENV.cypherApi
-
+  
     // h64=$(echo -n "{"alg":"HS256","typ":"JWT"}" | base64)
     this.h64 = ENV.h64
     this.api_id = ENV.apiId
     this.api_key = ENV.apiKey
   }
+
 
   generateToken() {
     const current = Math.round(new Date().getTime()/1000) + 10
@@ -156,5 +155,3 @@ export class CyphernodeClient {
     return this.get('/ots_getfile/' + hash, { encoding: null })
   }
 }
-
-// module.exports.CyphernodeClient = CyphernodeClient

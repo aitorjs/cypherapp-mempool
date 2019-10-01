@@ -13,4 +13,9 @@ export class MempoolRepository extends DefaultCrudRepository<
   ) {
     super(Mempool, dataSource);
   }
+
+  hola() {
+    console.log('hola')
+    return true
+  }
 }

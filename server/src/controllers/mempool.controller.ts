@@ -1,28 +1,10 @@
-// Uncomment these imports to begin using these cool features!
+import { get, getModelSchemaRef } from '@loopback/rest'
+import { repository } from '@loopback/repository'
 
-// import {inject} from '@loopback/context';
-
-import {
-  post,
-  param,
-  get,
-  getFilterSchemaFor,
-  getModelSchemaRef,
-  getWhereSchemaFor,
-  patch,
-  put,
-  del,
-  requestBody,
-} from '@loopback/rest';
-
-import { CyphernodeClient } from '../client'
+import { CyphernodeRepository } from '../repositories'
 import { Mempool } from '../models'
 export class MempoolController {
-  client: any;
-
-  constructor() {
-    this.client = new CyphernodeClient()
-  }
+  constructor(@repository(CyphernodeRepository) public repository: CyphernodeRepository) { }
 
   @get('/getMempoolinfo', {
     responses: {
@@ -64,7 +46,7 @@ export class MempoolController {
     },
   })
   async getMempoolinfo(): Promise<any> {
-    const mempoolinfo = await this.client.getMempoolinfo()
+    const mempoolinfo = await this.repository.getMempoolinfo()
     console.log('mempoolinfo', mempoolinfo)
     return mempoolinfo
   }

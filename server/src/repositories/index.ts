@@ -1,1 +1,2 @@
-export * from './mempool.repository';
+export * from './mempool.repository'
+export * from './cyphernode.repository'
