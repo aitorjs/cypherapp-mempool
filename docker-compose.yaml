@@ -13,7 +13,7 @@ services:
     restart: always
     labels:
       - "traefik.docker.network=cyphernodeappsnet"
-      - "traefik.frontend.rule=PathPrefix:/mempool"
+      - "traefik.frontend.rule=Host:mempool.localhost"
       - "traefik.frontend.passHostHeader=true"
       - "traefik.enable=true"
       - "traefik.port=3000"

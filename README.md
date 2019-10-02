@@ -27,7 +27,7 @@
 ```
 2. Build image: ```npm run docker-build-image```
 3. Exec container: ```npm run docker-run```
-4. Open webapp on ```http://localhost:3000/mempool``` and loopback explorer on ```http://localhost:3000/explorer/```
+4. Open webapp on ```http://localhost:3000/mempool``` and loopback explorer on ```http://localhost:3000/explorer```
 
 ## Using docker-composer
 
@@ -43,9 +43,11 @@
 ```
 2. Build image: ```npm run docker-build-image```
 3. Up docker-compose configuration: ```npm run docker-compose-up```
-4. Open webapp on ```https://localhost/mempool```
+4. Open webapp on ```https://mempool.localhost/mempool``` and loopback explorer on ```https://mempool.localhost/explorer```
 
 ## Notes
 
 - (*) In .env.cypherApi file, use ```127.0.0.1``` outside docker
 and ```gatekeeper``` inside docker.
+
+- Cyphernode by default creates this 'subdomain': ```cyphernode.localhost```
