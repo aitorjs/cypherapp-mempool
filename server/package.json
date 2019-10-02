@@ -1,7 +1,7 @@
 {
   "name": "cypherapp-mempool-server",
-  "version": "1.0.0",
-  "description": "Get Bitcoin node&#39;s mempool information using cyphernode. Server side",
+  "version": "0.1.1",
+  "description": "Get Bitcoin node's mempool information using cyphernode. Server side",
   "keywords": [
     "loopback-application",
     "loopback"
@@ -35,8 +35,8 @@
   "repository": {
     "type": "git"
   },
-  "author": "",
-  "license": "",
+  "author": "Aitor Ibañez <aitiba@gmail.com>",
+  "license": "GNU/GPL v3",
   "files": [
     "README.md",
     "index.js",

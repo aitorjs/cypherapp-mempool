@@ -1,6 +1,6 @@
 {
   "name": "cypherapp-mempool-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Get Bitcoin node's mempool information using cyphernode. Client side",
   "private": true,
   "scripts": {
